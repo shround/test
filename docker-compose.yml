@@ -1,7 +1,7 @@
 version: '2'
 
 volumes:
-  spotifycache:
+
 
 services:
 
@@ -68,11 +68,3 @@ services:
     privileged: true
     labels:
       io.balena.features.dbus: 1
-
-  spotify:
-    build: ./plugins/spotify
-    restart: on-failure
-    privileged: true
-    network_mode: host
-    volumes:
-      - spotifycache:/var/cache/raspotify
